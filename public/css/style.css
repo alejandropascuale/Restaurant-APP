@@ -19,7 +19,7 @@
     transition: all .2s linear;
 }
 html {
-    font-size: 80%;
+    font-size: 55%;
     /* sets what shows when content overflows a block-level element's left and right edges. This may be nothing, a scroll bar, or the overflow content */
     overflow-x: hidden;
     /* defines offsets for the top of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport. */
@@ -31,7 +31,7 @@ header {
     position: fixed;
     top: 0; left: 0; right: 0;
     background: #fff;
-    padding:  1rem 7%;
+    padding:  1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,4 +45,74 @@ header .logo {
 }
 header .logo i {
     color: var(--green);
+}  
+header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border-top: .1rem solid rgba(0,0,0,.2);
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+    padding: 1rem;
+    /* creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+header .navbar a {
+    display: block;
+    font-size: 2rem;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    background: #eee;
+    color: var(--light-color);
+}
+header .navbar a:hover {
+    color: #fff;
+    background: var(--green);
+}
+header .icons i, 
+header .icons a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+header .icons i:hover, 
+header .icons a:hover {
+    color: #fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+header .icons #menu-bars {
+    display: inline-block;
+} 
+
+/* media queries */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 62.5%;       
+    }
+    header {
+        padding:  1rem 7%;
+    }
+    header .icons #menu-bars {
+        display: none;
+    }
+    header .navbar {
+        display: block;
+    }
+    header .navbar a {
+        padding: .5rem 1.5rem;
+        font-size: 1.7rem;
+    }
 }

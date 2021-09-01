@@ -1,1 +1,6 @@
-console.log('hola, estoy probando la vinculacion');
+
+window.addEventListener('load', () => {
+    let menu = document.querySelector('#menu-bars');
+    let navbar = document.querySelector('.navbar');
+    
+})
