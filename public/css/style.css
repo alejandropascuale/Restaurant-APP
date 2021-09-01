@@ -1,0 +1,48 @@
+:root {
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1)
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    /* similar a border pero no ocupa espacio en el html ya que se dibuja sobre el elemento */
+    outline: none;
+    border: none;
+    /* transforma todas las palabras para que sea la primer letra en mayuscula */
+    text-transform: capitalize;
+    font-family: 'Amatic SC', cursive;
+    transition: all .2s linear;
+}
+html {
+    font-size: 80%;
+    /* sets what shows when content overflows a block-level element's left and right edges. This may be nothing, a scroll bar, or the overflow content */
+    overflow-x: hidden;
+    /* defines offsets for the top of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport. */
+    scroll-padding-top: 5.5rem;
+    /* especifica el comportamiento del desplazamiento para un elemento con desplazamiento, cuando éste se produce debido a la navegación o a APIs CSSOM. Otros desplazamientos, p.ej. aquellos realizados por el usuario, no se ven afectados por esta propiedad. Cuando esta propiedad está especificada en el elemento raíz, se aplica al viewport. */
+    scroll-behavior: smooth;
+}
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding:  1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+header .logo i {
+    color: var(--green);
+}
