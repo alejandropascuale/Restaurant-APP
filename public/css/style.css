@@ -47,13 +47,15 @@ header .logo i {
     color: var(--green);
 }  
 header .navbar {
+    display: none;
     position: absolute;
     top: 100%; left: 0; right: 0;
     background: #fff;
     border-top: .1rem solid rgba(0,0,0,.2);
     border-bottom: .1rem solid rgba(0,0,0,.2);
     padding: 1rem;
-    /* creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden */
+}
+header .navbar .active {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 header .navbar a {
@@ -94,9 +96,9 @@ header .icons #menu-bars {
 
 /* media queries */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
-}
+} */
 
 @media (min-width: 1024px) {
     html {
@@ -110,6 +112,8 @@ header .icons #menu-bars {
     }
     header .navbar {
         display: block;
+        /* creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     header .navbar a {
         padding: .5rem 1.5rem;
