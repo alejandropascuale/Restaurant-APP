@@ -31,7 +31,7 @@ header {
     position: fixed;
     top: 0; left: 0; right: 0;
     background: #fff;
-    padding:  1rem 2rem;
+    padding:  1rem 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,27 +47,32 @@ header .logo i {
     color: var(--green);
 }  
 header .navbar {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #fff;
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: #fff;
     border-top: .1rem solid rgba(0,0,0,.2);
     border-bottom: .1rem solid rgba(0,0,0,.2);
     padding: 1rem;
 }
-header .navbar .active {
+.active {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
+header .navbar .active {
+    color: #fff;
+    background: var(--green);
+}
 header .navbar a {
-    display: block;
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-radius: .5rem;
-    padding: 1.5rem;
+    padding: .5rem 1.5rem;
     margin: 1rem;
     background: #eee;
     color: var(--light-color);
 }
-header .navbar a:hover {
+header .navbar a .active:hover, header .navbar a:hover {
     color: #fff;
     background: var(--green);
 }
@@ -90,16 +95,13 @@ header .icons a:hover {
     background: var(--green);
     transform: rotate(360deg);
 }
-header .icons #menu-bars {
-    display: inline-block;
-} 
 
 /* media queries */
 
 /* @media (min-width: 768px) {
 
-} */
-
+}
+ */
 @media (min-width: 1024px) {
     html {
         font-size: 62.5%;       
@@ -112,8 +114,12 @@ header .icons #menu-bars {
     }
     header .navbar {
         display: block;
-        /* creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden */
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background: #fff;
+        position: static;
+        top: 0; left: 0; right: 0;
+        border-top: 0;
+        border-bottom: 0;
+        padding: 1rem;
     }
     header .navbar a {
         padding: .5rem 1.5rem;
