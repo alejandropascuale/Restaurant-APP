@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   </head>
   <body>
     <header>
@@ -32,9 +33,9 @@
       <i class="fas fa-times" id="close"></i>
     </form>
     <section class="home" id="home">
-      <div class="home-slider">
-        <div class="wrapper">
-          <div class="slide">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper wrapper">
+          <div class="swiper-slide slide">
             <div class="content">
               <span>our special dishes</span>
               <h3>spicy noodles</h3>
@@ -45,7 +46,7 @@
               <img src="/public/images/home-img-1.png" alt="">
             </div>
           </div>
-          <div class="slide">
+          <div class=" swiper-slide slide">
             <div class="content">
               <span>our special dishes</span>
               <h3>fried chicken</h3>
@@ -56,7 +57,7 @@
               <img src="/public/images/home-img-2.png" alt="">
             </div>
           </div>
-          <div class="slide">
+          <div class="swiper-slide slide">
             <div class="content">
               <span>our special dishes</span>
               <h3>hot pizza</h3>
@@ -68,8 +69,12 @@
             </div>
           </div>
         </div>
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
+      <div class="swiper-pagination"></div>
       </div>
     </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../public/javascripts/script.js"></script>
   </body>
 </html>
