@@ -35,6 +35,30 @@ let swiper = new Swiper(".home-slider", {
   loop: true,
 });
 
+new Swiper(".review-slider", {
+  spaceBetween: 20,
+  centeredSlides: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  brakpoints: {
+    0: {
+      slidesPerView:1,
+    },
+    640: {
+      slidesPerView:2,
+    },
+    768: {
+      slidesPerView:2,
+    },
+    1024: {
+      slidesPerView:3,
+    },
+  },
+});
+
 
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header .navbar a');
