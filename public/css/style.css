@@ -125,12 +125,25 @@ header .icons #menu-bars {
 /* search form ends */
 
 /* home section */
-
 section {
     padding: 2rem 9%;
 }
 section:nth-child(even) {
     background: #eee;
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn:hover {
+    background: var(--green);
+    letter-spacing: .1rem;
 }
 .home .home-slider .slide {
     display: flex;
@@ -154,27 +167,13 @@ section:nth-child(even) {
 }
 .home .home-slider .slide .content h3 {
     color: var(--black);
-    font-size: 5rem;
+    font-size: 7rem;
 }
 .home .home-slider .slide .content p {
     color: var(--light-color);
     font-size: 2.2rem;
     padding: .5rem 0;
-    line-height: 1.5;
-}
-.btn {
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 1.7rem;
-    color: #fff;
-    background: var(--black);
-    border-radius: .5rem;
-    cursor: pointer;
-    padding: .8rem 3rem;
-}
-.btn:hover {
-    background: var(--green);
-    letter-spacing: .1rem;
+    line-height: 1.5rem;
 }
 .swiper-pagination-bullet-active {
     background: var(--green);
@@ -471,10 +470,10 @@ section:nth-child(even) {
     header {
         padding: 1rem 2rem;
     }
+    /* section {
+        padding: 2rem;
+    } */
     /*
-    .home .home-slider .slide .content h3 {
-    font-size: 7rem;
-    }
     .dishes .box-container .box img {
     height: 17rem;
     margin: 1rem 0;
@@ -506,6 +505,9 @@ section:nth-child(even) {
     #search-form #search-box {
         width: 90%;
         margin: 0 1rem;
+    }
+    .home .home-slider .slide .content h3 {
+        font-size: 7rem;
     }
 }
 @media (max-width: 991px) {
